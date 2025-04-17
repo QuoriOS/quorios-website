@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>QuoriOS — Coming Soon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-section">
+        <img src="logo.png" alt="QuoriOS Logo" class="logo-img" />
+      </div>
+
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>
+            Your <span class="highlight">Blueprint</span> for <br />
+            Scalable Execution
+          </h1>
+          <p class="tagline">Define. Automate. Track. Iterate.</p>
+          <p class="coming-soon">Coming soon to teams that move fast.</p>
+
+          <div class="signup-card">
+            <form id="wait-list-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <button type="submit">Join the Waitlist</button>
+            </form>
+            <p class="form-msg" id="form-msg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("wait-list-form");
+      const msg = document.getElementById("form-msg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = form.querySelector("input[name='email']").value;
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbyrYnos-QvmSvyNJXiDjR6ZJ-kjuA9kTmzZ--ISFz0me9NN8zF101lxmWLkPavEyP-msw/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `email=${encodeURIComponent(email)}`,
+          }
+        );
+
+        msg.textContent = `Thanks! You'll hear from us at ${email}`;
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
