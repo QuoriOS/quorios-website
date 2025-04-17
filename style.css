@@ -22,6 +22,7 @@ body {
 .container {
   display: flex;
   height: 100vh;
+  flex-direction: row;
 }
 
 .logo-section {
@@ -30,6 +31,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .logo-img {
@@ -46,6 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -153,5 +156,35 @@ button:hover {
   .logo-img {
     width: 40%;
     margin-top: 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .coming-soon {
+    font-size: 1rem;
+  }
+
+  .signup-card {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  input[type="email"] {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  .form-msg {
+    font-size: 0.85rem;
   }
 }
