@@ -37,7 +37,7 @@ const Home: React.FC = () => {
               Your <span className="highlight">Blueprint</span> for <br />
               Scalable Execution
             </h1>
-            <p className="tagline">Define. Automate. Track. Iterate.</p>
+            <p className="tagline">Define. Execute. Track.</p>
             <p className="coming-soon">Coming soon to teams that move fast.</p>
 
             <div className="signup-card">
